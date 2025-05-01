@@ -2,17 +2,21 @@
 <html>
 <head>
   <title>Ganerben Ticket Weiterleitung</title>
+  <meta charset="UTF-8">
   <script>
-    window.onload = function() {
+    // Diese Funktion läuft sofort beim Laden
+    (function() {
       let timestamp = new Date().toISOString().replace(/[-:.TZ]/g, "");
       let randomNum = Math.floor(Math.random() * 10000);
       let uniqueId = "ganerben-" + timestamp + "-" + randomNum;
       console.log("Neuer Klick: " + uniqueId);
-      window.location.href = "https://kinki.ditix.shop/event/5d6ki0047ki3czsx?ref=" + uniqueId;
-    }
+
+      // Sofortige Weiterleitung
+      window.location.replace("https://kinki.ditix.shop/event/5d6ki0047ki3czsx?ref=" + uniqueId);
+    })();
   </script>
 </head>
 <body>
-  <p>Bitte warten... Du wirst weitergeleitet.</p>
+  <p>Du wirst automatisch weitergeleitet...</p>
 </body>
 </html>
